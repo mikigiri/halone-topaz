@@ -1,0 +1,32 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            display-name = "defalut";
+
+            bindings = <
+                &kp LBKT        &kp RBKT        &kp SEMI        &kp SQT         &kp N5          &kp N6
+                &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS       &kp EQUAL
+                &kp LS(LBKT)    &kp LS(RBKT)    &kp LS(SEMI)    &kp LS(SQT)     &kp LS(N5)      &kp LS(N6)
+                &kp LC(R)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)      &kp LS(MINUS)   &kp LS(EQUAL)
+                &kp LS(DEL)     &kp LS(R)       &kp LC(DEL)     &mo 1           &kp R           &kp SPACE
+            >;
+        };
+
+        shift_layer {
+            display-name = "shift";
+
+            bindings = <
+                &kp F1          &kp F2          &kp F3          &kp F4          &kp F5          &kp F6
+                &kp F7          &kp F8          &kp COMMA       &kp DOT         &kp F11         &kp F12
+                &kp LS(F1)      &kp LS(F2)      &kp LS(F3)      &kp LS(F4)      &kp LS(F5)      &kp LS(F6)
+                &kp LS(R)       &kp LS(F8)      &kp LS(COMMA)   &kp LS(DOT)     &kp LS(F11)     &kp LS(F12)
+                &trans          &trans          &trans          &trans          &trans          &trans
+            >;
+        };
+    };
+};
