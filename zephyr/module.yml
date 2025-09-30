@@ -1,3 +1,4 @@
+name: HaloneTopaz
 build:
   settings:
     board_root: .
