@@ -1,0 +1,6 @@
+if SHIELD_HALONE_TOPAZ
+
+config ZMK_KEYBOARD_NAME
+    default "Halone Topaz"
+
+endif
