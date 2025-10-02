@@ -1,0 +1,10 @@
+file_format: "1"
+id: halone_topaz
+name: HaloneTopaz
+type: shield
+url: https://zmk.dev/docs/troubleshooting/hardware-issues
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - studio
+  - pointer
