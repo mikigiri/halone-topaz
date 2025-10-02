@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     keymap {
@@ -9,11 +10,11 @@
             display-name = "defalut";
 
             bindings = <
-                &kp LBKT        &kp RBKT        &kp SEMI        &kp SQT         &kp N5          &kp N6
+                &bt BT_CLR      &kp RBKT        &kp SEMI        &kp SQT         &kp N5          &kp N6
                 &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS       &kp EQUAL
                 &kp LS(LBKT)    &kp LS(RBKT)    &kp LS(SEMI)    &kp LS(SQT)     &kp LS(N5)      &kp LS(N6)
                 &kp LC(R)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)      &kp LS(MINUS)   &kp LS(EQUAL)
-                &kp LS(DEL)     &kp LS(R)       &kp LC(DEL)     &mo 1           &kp R           &kp SPACE
+                &kp LS(DEL)     &kp LS(R)       &to 2           &mo 1           &kp R           &kp SPACE
             >;
         };
 
@@ -26,6 +27,18 @@
                 &kp LS(F1)      &kp LS(F2)      &kp LS(F3)      &kp LS(F4)      &kp LS(F5)      &kp LS(F6)
                 &kp LS(R)       &kp LS(F8)      &kp LS(COMMA)   &kp LS(DOT)     &kp LS(F11)     &kp LS(F12)
                 &trans          &trans          &trans          &trans          &trans          &trans
+            >;
+        };
+
+        movement_layer {
+            display-name = "movement";
+
+            bindings = <
+                &to 0           &to 0           &kp Q           &kp W           &kp E           &to 0
+                &to 0           &to 0           &kp A           &kp LS(W)       &kp D           &to 0
+                &to 0           &to 0           &to 0           &kp S           &to 0           &to 0
+                &to 0           &to 0           &to 0           &to 0           &to 0           &to 0
+                &to 0           &to 0           &to 0           &to 0           &to 0           &to 0
             >;
         };
     };
