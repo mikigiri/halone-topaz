@@ -14,7 +14,6 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
-        zmk,analog-inputs = &anin0;
     };
 
     kscan0: kscan0 {
@@ -57,7 +56,7 @@
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
 		x-ch {
-			io-channels = <&adc 0>; // <--- see ain-map.png for nRF52840
+			io-channels = <&adc 0>;
 			mv-mid = <1630>;
 			mv-min-max = <1600>;
 			mv-deadzone = <10>;
@@ -66,9 +65,10 @@
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_X>;
+			report-on-change-only;
 		};
 		y-ch {
-			io-channels = <&adc 1>; // <--- see ain-map.png for nRF52840
+			io-channels = <&adc 1>;
 			mv-mid = <1630>;
 			mv-min-max = <1600>;
 			mv-deadzone = <10>;
@@ -77,12 +77,7 @@
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_Y>;
-
-			/* enable report mdoe for gamepad axix or knob */
-			/* to only call input_report on quantquantized value is updated */
-			/* NOTE: mouse input does NOT need this */
 			report-on-change-only;
-
 		};
 	};
 };
