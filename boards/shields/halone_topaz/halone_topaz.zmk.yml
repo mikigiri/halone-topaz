@@ -6,5 +6,3 @@ url: https://zmk.dev/docs/troubleshooting/hardware-issues
 requires: [seeeduino_xiao_ble]
 features:
   - keys
-  - studio
-  - pointer
