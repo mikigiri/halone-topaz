@@ -14,7 +14,7 @@
     zip_fwd_to_hid_io: zip_forward_fwd_to_hid_io {
         compatible = "zmk,input-processor-fwd-to-hid-io";
         #input-processor-cells = <0>;
-        usage = <HID_IO_USAGE_FWD_TO_MOUSE>;
+        usage = <HID_IO_USAGE_FWD_TO_JOYSTICK>;
     };
 
     /* input listener config for mouse move mode */
