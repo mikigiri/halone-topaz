@@ -24,6 +24,18 @@
         input-processors = <&zip_fwd_to_hid_io>;
 	};
 
+    /* Setup joystick key press behavior and listener */
+    /* listerer shall forward to JOYSTICK usage page if CONFIG_ZMK_HID_IO_JOYSTICK enabling */
+    hidiokp: hid_io_key_press {
+        compatible = "zmk,behavior-hid-io-key-press";
+        #binding-cells = <1>;
+    };
+	hidiokp_ibl {
+		compatible = "zmk,input-behavior-listener";
+		device = <&hidiokp>;
+        input-processors = <&zip_fwd_to_hid_io>;
+	};
+
     keymap {
         compatible = "zmk,keymap";
         
@@ -31,7 +43,7 @@
             display-name = "defalut";
 
             bindings = <
-                &bt BT_CLR      &kp RBKT        &kp SEMI        &kp SQT         &kp N5          &kp N6
+                &bt BT_CLR      &hidiokp 0      &hidiokp 1      &kp SQT         &kp N5          &kp N6
                 &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS       &kp EQUAL
                 &kp LS(LBKT)    &kp LS(RBKT)    &kp LS(SEMI)    &kp LS(SQT)     &kp LS(N5)      &kp LS(N6)
                 &kp LC(R)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)      &kp LS(MINUS)   &kp LS(EQUAL)
