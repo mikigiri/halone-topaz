@@ -16,7 +16,7 @@ manifest:
       remote: badjeff
       revision: main
     - name: zmk-hid-io
-      remote: badjeff
+      remote: mikigiri
       revision: main
   self:
     path: config
