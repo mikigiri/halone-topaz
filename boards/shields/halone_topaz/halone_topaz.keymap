@@ -44,9 +44,6 @@
 
             bindings = <
                 &bt BT_CLR      &hidiokp 0      &hidiokp 1      &kp SQT         &kp N5          &kp N6
-                &kp N7          &kp N8          &kp N9          &kp N0          &kp MINUS       &kp EQUAL
-                &kp LS(LBKT)    &kp LS(RBKT)    &kp LS(SEMI)    &kp LS(SQT)     &kp LS(N5)      &kp LS(N6)
-                &kp LC(R)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)      &kp LS(MINUS)   &kp LS(EQUAL)
             >;
         };
 
@@ -55,9 +52,6 @@
 
             bindings = <
                 &kp F1          &kp F2          &kp F3          &kp F4          &kp F5          &kp F6
-                &kp F7          &kp F8          &kp COMMA       &kp DOT         &kp F11         &kp F12
-                &kp LS(F1)      &kp LS(F2)      &kp LS(F3)      &kp LS(F4)      &kp LS(F5)      &kp LS(F6)
-                &kp LS(R)       &kp LS(F8)      &kp LS(COMMA)   &kp LS(DOT)     &kp LS(F11)     &kp LS(F12)
             >;
         };
 
@@ -66,9 +60,6 @@
 
             bindings = <
                 &to 0           &to 0           &kp Q           &kp W           &kp E           &to 0
-                &to 0           &to 0           &kp A           &kp LS(W)       &kp D           &to 0
-                &to 0           &to 0           &to 0           &kp S           &to 0           &to 0
-                &to 0           &to 0           &to 0           &to 0           &to 0           &to 0
             >;
         };
     };
