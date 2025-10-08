@@ -21,3 +21,4 @@
 include:
   - board: seeeduino_xiao_ble
     shield: halone_topaz
+    snippet: zmk-usb-logging
