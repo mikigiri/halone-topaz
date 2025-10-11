@@ -2,6 +2,8 @@ manifest:
   defaults:
     revision: v0.3
   remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: mikigiri
       url-base: https://github.com/mikigiri
     - name: badjeff
@@ -10,13 +12,13 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: mikigiri
+      remote: zmkfirmware
       import: app/west.yml
     - name: zmk-analog-input-driver
       remote: badjeff
       revision: main
     - name: zmk-hid-io
-      remote: mikigiri
+      remote: badjeff
       revision: main
   self:
     path: config
